@@ -1,5 +1,22 @@
 .navNavbar{
-    background-color: gray;
+    display: flex;
+   /*  flex-direction: column; */
+   justify-content: center;
+   align-items: center;
+   background-color: gray; 
     margin: 5px;
-    padding: 5px;
+    padding: 15px;
+}
+
+.tituloNavBar{
+    display: flex;
+    margin: 30px;
+}
+
+.contenedorBotones{
+    margin: 30px;
+}
+
+.botonZapatillas{
+    margin: 5px;
 }
