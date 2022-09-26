@@ -2,8 +2,8 @@ import "./navBar.css"
 
 const NavBar = () => {
     return (
-        <nav class="navNavbar">
-            <h1 class="tituloNavBar"> Venta de sneakers</h1>
+        <nav className="navNavbar">
+            <h1 className="tituloNavBar"> Venta de sneakers</h1>
             <div >
                 <button>Zapatillas</button>
             </div>
