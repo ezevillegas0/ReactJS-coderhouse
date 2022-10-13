@@ -1,0 +1,43 @@
+
+.CardItem {
+    width: 500px;
+    padding: 30px;
+    margin: 30px;
+    font-size: 10px;
+    background-color: rgb(242, 165, 165);
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.ContainerItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.ItemHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.Info {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Button {
+    padding: 15px;
+    font-size: 15px;
+    background: gray;
+    border-radius: 10px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.ItemImg {
+    width: 300px;
+    height: 300px;
+    object-position: center;
+}

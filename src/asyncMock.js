@@ -3,7 +3,6 @@ const products = [
         id: "1",
         nombre: 'Air Force 1',
         precio: '2.190',
-        //img: 'https://res.cloudinary.com/dazcznbsh/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1665614283/Reactjs/ricke_xwwgfo.webp',
         img: "/images/airforce1blancas.jpg",
         descripcion:'Air Force 1 blancas, unicamente talles para hombre.',
         category : 'Nike',
@@ -34,5 +33,21 @@ export const getProducts = () => {
         setTimeout(() => {
             resolve(products)
         }, 2000)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find (prod => prod.id === id))
+        }, 1000)
+    })
+}
+
+export const getProductsByCategory = (category) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category ===category))
+        }, 500)
     })
 }

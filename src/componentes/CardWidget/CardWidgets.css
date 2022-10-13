@@ -1,7 +1,12 @@
 .contenedorLogo{
-margin: 30px;
+    padding: 12px;
+    background: #d68fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .logo{
-    width: 10%;
+   margin-right: 10px;
+   width: 70px;
 }

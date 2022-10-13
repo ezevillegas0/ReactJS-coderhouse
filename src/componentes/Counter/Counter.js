@@ -3,22 +3,23 @@ import "./Counter.css"
 
 let stock = 10;
 
-const Counter = ({onAdd}) => {
+const Counter = ({stock = 0, initial = 1, onAdd}) => {
     
-    const [contador, setContador] = useState(0)
+    const [quantity, setQuantity] = useState(initial)
 
     //Acciones del contador
+    const sumar = () => {
+        if(quantity < stock){
+            setQuantity(quantity + 1)
+        }
+    } 
+
     const restar = () => {
-        if(contador > 0) {
-            setContador(contador - 1)
+        if(quantity > 1) {
+            setQuantity(quantity - 1)
         }
     }
-    const sumar = () => {
-        if(contador < stock){
-            setContador(contador + 1)
-        }
-        
-    } 
+
     /*const onAdd = () => {
         console.log(contador)
     }*/
@@ -28,12 +29,12 @@ const Counter = ({onAdd}) => {
         <div>
             <div className='ContenedorContador'>
               <button className='button' onClick={restar}>-</button>
-              <h2 className='contador'>{contador}</h2>
+              <h2 className='contador'>{quantity}</h2>
               <button className='button' onClick={sumar}>+</button>
             </div>
 
            <div>
-              <button className='button' onClick={onAdd}>Agregar al carrito</button>
+           <button className="Button" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
            </div>
           
         </div>

@@ -1,10 +1,12 @@
 import './App.css';
+import { useState } from 'react';
 import NavBar from './componentes/NavBar/navBar';
-//import AvatarJsx from "./componentes/AvatarJsx/AvatarJsx"
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import Counter from './componentes/Counter/Counter';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
+
+  const [page, setPage] = useState("list")
 
   const handleOnAdd = () => {
     console.log("se agrego al carrito!")
@@ -12,9 +14,9 @@ function App() {
   
   return (
     <div className="App">
-        <NavBar/>
-        <ItemListContainer greeting={"Bienvenidos a Sneakers House"}/>
-        <Counter onAdd={handleOnAdd}/>
+      <NavBar/>
+      { page === "list" && <ItemListContainer greeting={"Bienvenidos a Sneakers House"}/>}
+      { page === "detail" && <ItemDetailContainer />}
     </div>
   );
 }
