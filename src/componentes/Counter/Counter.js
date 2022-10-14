@@ -34,7 +34,7 @@ const Counter = ({stock = 0, initial = 1, onAdd}) => {
             </div>
 
            <div>
-           <button className="Button" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+           <button className=" btn btn-dark Button" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
            </div>
           
         </div>

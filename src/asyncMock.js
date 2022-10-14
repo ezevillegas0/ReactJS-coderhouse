@@ -1,6 +1,6 @@
 const products = [
     {
-        id: "1",
+        id: '1',
         nombre: 'Air Force 1',
         precio: '2.190',
         img: "/images/airforce1blancas.jpg",
@@ -37,17 +37,19 @@ export const getProducts = () => {
 }
 
 export const getProductById = (id) => {
-    return new Promise((resolve) => {
+    return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products.find (prod => prod.id === id))
-        }, 1000)
+            resolve(products.find(prod => {
+                return prod.id === id
+            }))
+        }, 500)
     })
 }
 
-export const getProductsByCategory = (category) => {
+export const getProductsByCategory = (categoryId) => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products.filter(prod => prod.category ===category))
+            resolve(products.filter(prod => prod.category === categoryId))
         }, 500)
     })
 }

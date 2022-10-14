@@ -6,11 +6,16 @@
    background-color: gray; 
     /* margin: 5px; */
     padding: 15px;
+    
 }
 
 .tituloNavBar{
     display: flex;
     margin: 30px;
+   color: black;
+   text-decoration: none;
+   /* pointer-events: none; */
+
 }
 
 .contenedorBotones{
