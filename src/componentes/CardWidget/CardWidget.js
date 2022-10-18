@@ -1,11 +1,20 @@
 import cart from "./assets/carrito.png"
 import "./CardWidgets.css"
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 const CardWidget = () => {
+
+    const {totalQuantity} = useContext(CartContext)
+
+
+
+
+
     return (
-        <div className="contenedorLogo">
+        <div to='/cart' className="contenedorLogo">
             <img className="logo" src={cart} alt="logo sneakers"/>
-            10
+            {totalQuantity}
         </div>
     )
 }
