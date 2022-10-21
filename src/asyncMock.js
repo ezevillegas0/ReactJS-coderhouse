@@ -1,5 +1,5 @@
 const products = [
-    {
+/*     {
         id: '1',
         nombre: 'Air Force 1',
         precio: '2.190',
@@ -25,7 +25,7 @@ const products = [
         descripcion:'Adidas Ozweego, unicamente talles para mujer',
         category : 'Adidas',
         stock: 10,
-    },
+    }, */
     {
         id: '4',
         nombre: 'Air Force 1',
@@ -44,7 +44,7 @@ const products = [
         category : 'Jordan',
         stock: 10,
     },
-    {
+/*     {
         id: '6',
         nombre: 'Adidas Yeezy 700 V3 Arzareth',
         precio: '3.000',
@@ -52,7 +52,7 @@ const products = [
         descripcion:'Adidas Yeezy 700 V3 Arzareth, unicamente talles para hombres.',
         category : 'Adidas',
         stock: 10,
-    }
+    } */
     
 ]
 
