@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import "./Counter.css"
 
-let stock = 10;
-
 const Counter = ({stock = 0, initial = 1, onAdd}) => {
     
     const [quantity, setQuantity] = useState(initial)
@@ -19,10 +17,6 @@ const Counter = ({stock = 0, initial = 1, onAdd}) => {
             setQuantity(quantity - 1)
         }
     }
-
-    /*const onAdd = () => {
-        console.log(contador)
-    }*/
 
     //return
     return (

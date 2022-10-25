@@ -10,9 +10,11 @@ import { db } from '../../services/firebase'
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
-
     const { productId } = useParams()
 
+    useEffect(() => {
+        document.title = loading ? 'Cargando' : `Detalle ${product.nombre} `
+    })
 
     useEffect(() => {
 

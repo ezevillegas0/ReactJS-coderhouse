@@ -8,20 +8,38 @@ export const CartContext = createContext({
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     const [totalQuantity, setTotalQuantity] = useState(0)
-
-    console.log(cart)
+    const [total, setTotal] = useState(0)
 
     useEffect(() => {
         const totalQty = getQuantity()
         setTotalQuantity(totalQty)
     }, [cart])
 
-    const addItem = (productToAdd) => {
-        console.log('additem')
+    useEffect(() => {
+        const total = getTotal()
+        setTotal(total)
+    }, [cart])
+
+    const addItem = (productToAdd, quantity) => {
         if(!isInCart(productToAdd.id)) {
+            productToAdd.quantity = quantity
             setCart([...cart, productToAdd])
         } else {
-        console.log('ya esta en el carrito')
+          console.log('ya esta en el carrito')
+
+          const cartUpdate = cart.map(prod => {
+            
+            if(prod.id === productToAdd.id) {
+                const productUpdated = {
+                    ...prod,
+                    quantity: quantity
+                }
+                return productUpdated
+            } else {
+                return prod
+            }
+          })
+          setCart(cartUpdate)
         }
     }
 
@@ -44,9 +62,28 @@ export const CartProvider = ({children}) => {
         return accu
     }
 
+    const getTotal = () => {
+        let accu = 0
+  
+        cart.forEach(prod => {
+            accu += prod.quantity * prod.precio
+        })
+  
+        return accu
+    }
+
+    const clearCart = () => {
+        setCart([])
+    }
+
+    const getProductQuantity = (id) => {
+        const product = cart.find(prod => prod.id === id)
+
+        return product?.quantity
+    }
 
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, totalQuantity }}>
+        <CartContext.Provider value={{ cart, addItem, removeItem, isInCart, totalQuantity, total, clearCart, getProductQuantity}}>
             {children}
         </CartContext.Provider>
     )

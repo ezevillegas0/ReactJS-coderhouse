@@ -11,7 +11,9 @@ const ItemListContainer = ({greeting}) => {
     const [loading, setLoading] =  useState(true)
     const { categoryId} = useParams()
 
-
+    useEffect(() => {
+        document.title = loading ? 'Cargando' : `Listado de productos  `
+    })
 
     useEffect(() => {
         setLoading(true)
