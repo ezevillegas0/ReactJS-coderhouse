@@ -2,7 +2,8 @@ import './ItemDetail.css'
 import Counter from "../Counter/Counter"
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
-import { useCart  } from '../../context/CartContext'
+/* import { useCart  } from '../../context/CartContext' */
+import { Link } from 'react-router-dom'
 import { NotificationContext } from '../../notification/NotificationService'
 
 const ItemDetail = ({ id, nombre, img, category, descripcion, precio, stock }) => {
@@ -55,8 +56,9 @@ const ItemDetail = ({ id, nombre, img, category, descripcion, precio, stock }) =
                 Precio: $ {precio}
             </p>
         </section>           
-        <footer>
-            <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded}  />
+        <footer className='ItemFooter'>
+            { stock !== 0 ? <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded} />: <p className='NoStock'>No hay stock de este producto</p>}
+            {isInCart(id) && <Link to='/cart' className='btn btn-dark finalizar'>Finalizar compra</Link>}
         </footer>
     </article>
     )
