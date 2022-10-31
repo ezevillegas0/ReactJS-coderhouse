@@ -1,3 +1,11 @@
+.contenedorCarrito{
+    background-color: #282c34;
+}
+
+.tituloCarrito{
+    color: white;
+}
+
 .Button {
     margin: 10px;
     padding: 10px;

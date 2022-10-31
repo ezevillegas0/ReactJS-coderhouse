@@ -66,7 +66,7 @@ export const CartProvider = ({children}) => {
         let accu = 0
   
         cart.forEach(prod => {
-            accu += prod.quantity * prod.precio
+            accu += prod.quantity * prod.price
         })
   
         return accu

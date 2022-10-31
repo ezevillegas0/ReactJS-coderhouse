@@ -5,52 +5,40 @@
     padding: 20px;
     margin: 30px;
     font-size: 10px;
-    background-color: papayawhip;
-    border: 1px solid #e1e1e1;
+    background-color:#282c34;
+    color: white;
+    border: 3px solid  rgb(148, 251, 251);
     border-radius: 10px;
-}
-
-.InfoCartItem {
-    margin-right: 50px;
 }
 
 .ContainerItemCartItem {
     display: flex;
-    justify-content: space-between;
-}
-
-.ItemHeaderCartItem {
-    display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .InfoCartItem {
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     justify-content: space-between;
-}
-
-.ButtonCartItem {
-    width: auto;
-    padding: 12px;
-    font-size: 8px;
-    background: #8C30F5;
-    border-radius: 8px;
-    flex: none;
-    display: flex;
-    order: 1;
-    align-self: center;
-    flex-grow: 0;
-    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: #FFFFFF;
-    border: none;
-    border-style: none;
-    cursor: pointer;
-    outline: inherit;
+    justify-content: center;
+    margin-right: 25px;
+    margin-left: 35px;
 }
 
 .ItemFooterCartItem {
     display: flex;
 }
+
+.ButtonCartItem {
+    padding: 15px;
+    font-size: 12px;
+    background: rgb(148, 251, 251);
+    border-radius: 15px;
+    align-self: center;
+    color: black;
+    border-style: none;
+    cursor: pointer;
+}
+

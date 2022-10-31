@@ -1,9 +1,12 @@
-.tituloPrincipal{
-    background-color: rgb(242, 165, 165);
+.tituloPrincipal {
+    background-color: #0dcaf0;
     margin-bottom: 0rem;
 }
 
 .contenedorProductos {
-    background-color: gray;
+    background-color: #282c34;
 }
 
+.tituloListadoProductos{
+    color: white;
+}

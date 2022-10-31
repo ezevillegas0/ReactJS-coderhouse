@@ -1,0 +1,41 @@
+.myForm {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    background-color:#282c34 ;
+}
+
+.myForm1 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    width: 100vh;
+    margin-top: 60px;
+}
+
+.myFormli {
+    
+    text-align: start;
+    margin-top: 10px;
+}
+.myFormsepar {
+    list-style: none;
+    text-align: start;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+.myFormbutton {
+    margin-left: 0px;
+    margin-top: 26%;
+    width: 330px;
+    height: 50px;
+    
+   
+}
+
+.botonGenerarOrden {
+    color: white;
+    background-color: #282c34;
+}

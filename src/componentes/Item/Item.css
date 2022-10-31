@@ -1,10 +1,11 @@
 .cardContenedora{
-    width: 550px;
+    width: 480px;
+    height: 490px;
     padding: 10px;
-    margin: 30px;
+    margin-bottom: 35px;
     font-size: 15px;
-    background-color: rgb(242, 165, 165); 
-    border: 8px solid #000000;
+    background-color: white; 
+    border: 6px solid rgb(148, 251, 251);
     border-radius: 10px;
 }
 
@@ -12,8 +13,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    border-radius: 25px;
-    background-color:gray;
 }
 
 .imagenProducto {
@@ -21,11 +20,12 @@
     height: 300px;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
+    border-radius: 10px; 
+
 }
 
-.precioProducto {
+.priceProducto {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 25px;
 }
-

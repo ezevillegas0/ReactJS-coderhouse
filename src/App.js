@@ -1,5 +1,4 @@
 import './App.css';
-import { useState, createContext } from 'react';
 import NavBar from './componentes/NavBar/navBar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
@@ -17,8 +16,8 @@ function App() {
           <BrowserRouter> 
             <NavBar/>
             <Routes>
-              <Route path= '/' element={<ItemListContainer greeting=    {"Bienvenidos a Sneakers House"}/>} />  
-              <Route path= '/category/:categoryId' element={ <ItemListContainer />}/> 
+              <Route path= '/' element={<ItemListContainer greeting= {"Bienvenidos a Sneakers House!"}/>} />  
+              <Route path= '/category/:categoryId' element={ <ItemListContainer greeting= {"Bienvenidos a Sneakers House!"} />}/> 
               <Route path= '/detail/:productId' element={ <ItemDetailContainer />}/> 
               <Route path= '/cart' element={ <Cart />}/> 
               <Route path='/checkout' element={<Checkout />}/> 

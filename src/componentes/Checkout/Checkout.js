@@ -1,15 +1,21 @@
+import "./Checkout.css"
 import { useState, useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { NotificationContext} from '../../notification/NotificationService'
-import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
+import { collection, getDocs, query, where, documentId, writeBatch, addDoc, getFirestore } from 'firebase/firestore'
 import { db } from '../../services/firebase/index'
 import { useNavigate } from "react-router-dom"
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
 
-    const { cart, total, clearCart } = useContext(CartContext)
+    const { cart, total, clearCart, totalQuantity } = useContext(CartContext)
     const { setNotification } = useContext(NotificationContext)
+
+    const [ name, setName] = useState('')
+    const [ lastName, setLastName] = useState('')
+    const [ email, setEmail] = useState('')
+    const [ coments, setComents] = useState('')
 
     const navigate = useNavigate()
 
@@ -20,12 +26,13 @@ const Checkout = () => {
         try{
             const objOrder = {
                 buyer: {
-                    nombre: "Ezequiel Villegas",
-                    telefono: "11652075573",
-                    mail: "ezevillegas0@gmai;.com"
+                    name: name,
+                    lastName: lastName,
+                    email: email,
+                    coments: coments,
                 },
                 items: cart,
-                total
+                total: total
             }
     
             const batch = writeBatch(db)
@@ -88,10 +95,43 @@ const Checkout = () => {
 
     return(
         <div>
-            <h1>Checkout</h1>
-            <h2>Formulario</h2>
-            {/* <Form />  componente de un formulario*/}
-            <button onClick={createOrder}>Generar orden</button>
+            <h1 className="tituloPrincipal">Checkout</h1>
+            <form  className="myForm">
+                <div className='myForm1' >
+                  <label  className="form-label">Nombre</label> 
+                  <input type="text" className="form-control" id="exampleFormControlInput1" value={name} onChange={(e) => setName(e.target.value)}   placeholder="Juanito Carlos Segundo " />
+                  <label  className="form-label">Apellido</label>
+                  <input type="text" className="form-control" id="exampleFormControlInput1" value={lastName} onChange={(e) => setLastName(e.target.value)}   placeholder="Telasube" />
+                  <label  className="form-label">Email address</label>
+                  <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}   id="exampleFormControlInput1" placeholder="tunombre@tucorreo.com" />
+                  <label  className="form-label">Comentarios sobre el pedido:</label>
+                  <textarea className="form-control" value={coments} onChange={(e) => setComents(e.target.value)} id="exampleFormControlTextarea1" rows="2"></textarea>
+                </div>
+        
+                <button className="btn btn-info myFormbutton" onClick={createOrder}>Generar orden</button>
+
+                <div className="myForm1">
+                    <h3>pedido:</h3>
+                    <ul className='myFormul'>
+                        {cart.map(prod => {
+                            return (
+                                <div key={prod.id}>
+                                  <li>{prod.name}</li>
+                                  <li> {prod.quantity}</li>
+                                </div>
+                            )
+                        })}
+                        <li className='myFormsepar'>-------------------------------------------</li>
+                        <li className='myFormli'>Cantidad de productos: {totalQuantity}</li>
+                        <li className='myFormli'>Valor total: $ {total} </li>
+
+                    </ul>
+
+                </div>
+
+
+            </form>
+            
            
         </div>
     )
