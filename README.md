@@ -6,7 +6,7 @@ Este proyecto fue hecho con [Create React App](https://github.com/facebook/creat
 
 - deploy en firebase: https://console.firebase.google.com/project/coderhouse-react-7f5e6/firestore/data/~2F?hl=es-419
 - deply en vercel: https://react-js-coderhouse.vercel.app/
-- gif del funcionamiento: 
+- gif del funcionamiento: https://drive.google.com/drive/folders/1YmSu6DZYPem2L5-tFC8KZ2Tf5EIe0h26?usp=sharing
 - mis repositorios: https://github.com/ezevillegas0?tab=repositories
 
 ## pasos a seguir para el compilado
