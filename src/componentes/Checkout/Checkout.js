@@ -7,6 +7,8 @@ import { db } from '../../services/firebase/index'
 import { useNavigate } from "react-router-dom"
 
 const Checkout = () => {
+
+    document.title= "Checkout"
     const [loading, setLoading] = useState(false)
 
     const { cart, total, clearCart, totalQuantity } = useContext(CartContext)

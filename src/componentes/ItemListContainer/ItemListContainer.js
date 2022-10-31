@@ -6,6 +6,8 @@ import { getProducts } from "../../services/firebase/firestore/products"
 import { useAsync } from "../../hooks/useAsync"
 
 const ItemListContainer = ({greeting}) => {
+
+    document.title= "Productos" 
     const { categoryId} = useParams()
 
     const getProductsWithCategory = () => getProducts(categoryId)

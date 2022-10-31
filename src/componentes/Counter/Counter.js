@@ -5,7 +5,6 @@ const Counter = ({stock = 0, initial = 1, onAdd}) => {
     
     const [quantity, setQuantity] = useState(initial)
 
-    //Acciones del contador
     const sumar = () => {
         if(quantity < stock){
             setQuantity(quantity + 1)
@@ -18,7 +17,6 @@ const Counter = ({stock = 0, initial = 1, onAdd}) => {
         }
     }
 
-    //return
     return (
         <div>
             <div className='ContenedorContador'>

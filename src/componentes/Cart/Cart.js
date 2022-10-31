@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
+    document.title= "Carrito" 
+
     const  { cart, removeItem, total, clearCart, totalQuantity } = useContext(CartContext)
 
     if(totalQuantity === 0) {
