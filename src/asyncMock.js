@@ -40,7 +40,7 @@ const products = [
         name: 'Jordan 1 Retro High OG Chicago',
         price: '1.450',
         img: '/images/jordan1chicago.jpg',
-        img: "/images/adidasyeezyboost700v3alvah.webp",
+        img: "/images/airjordan5anthracite.webp",
         description:'Jordan 1 Chicago, talles para hombre y mujer.',
         category : 'Jordan',
         stock: 10,
