@@ -35,7 +35,7 @@ const ItemDetail = ({ id, name, img, description, price, stock }) => {
                 <div className="col-md-8">
                     <div className="card-body">
                         <h1 className="tituloDetail">{name}</h1>
-                        <p className='card-text'>{description}{description}</p>
+                        <p className='card-text'>{description}</p>
                         <h3 >price: $ {price}</h3>
                     </div>
                     <footer className='ItemFooter'>
