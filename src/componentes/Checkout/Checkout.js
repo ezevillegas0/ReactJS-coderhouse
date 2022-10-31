@@ -101,11 +101,11 @@ const Checkout = () => {
             <form  className="myForm">
                 <div className='myForm1' >
                   <label  className="form-label">Nombre</label> 
-                  <input type="text" className="form-control" id="exampleFormControlInput1" value={name} onChange={(e) => setName(e.target.value)}   placeholder="Juanito Carlos Segundo " />
+                  <input type="text" className="form-control" id="exampleFormControlInput1" value={name} onChange={(e) => setName(e.target.value)}   placeholder="Ingresar su nombre" />
                   <label  className="form-label">Apellido</label>
-                  <input type="text" className="form-control" id="exampleFormControlInput1" value={lastName} onChange={(e) => setLastName(e.target.value)}   placeholder="Telasube" />
+                  <input type="text" className="form-control" id="exampleFormControlInput1" value={lastName} onChange={(e) => setLastName(e.target.value)}   placeholder="Ingresar su apellido" />
                   <label  className="form-label">Email address</label>
-                  <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}   id="exampleFormControlInput1" placeholder="tunombre@tucorreo.com" />
+                  <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}   id="exampleFormControlInput1" placeholder="ingresaremail@tuemail.com" />
                   <label  className="form-label">Comentarios sobre el pedido:</label>
                   <textarea className="form-control" value={coments} onChange={(e) => setComents(e.target.value)} id="exampleFormControlTextarea1" rows="2"></textarea>
                 </div>
