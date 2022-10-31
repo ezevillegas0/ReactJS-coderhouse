@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Sneakers House
 
 Este proyecto fue hecho con [Create React App](https://github.com/facebook/create-react-app).
 
